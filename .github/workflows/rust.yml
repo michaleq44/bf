@@ -36,5 +36,7 @@ jobs:
       run: cargo build --verbose
     - name: Run
       run: cargo run test.bf
+    - name: List
+      run: dir
     - name: Test
       run: test.exe
