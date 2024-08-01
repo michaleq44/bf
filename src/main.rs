@@ -85,7 +85,7 @@ fn main() {
         let _ = Command::new("mingw64\\bin\\gcc")
                 .arg(Path::new(f.clone().as_str()).with_extension("c").to_str().expect("Cannot access filesystem"))
                 .arg("-o")
-                .arg(Path::new(f.clone().as_str()).with_extension("").to_str().expect("Cannot access filesystem"))
+                .arg(Path::new(f.clone().as_str()).with_extension("exe").to_str().expect("Cannot access filesystem"))
                 .output()
                 .expect("Cannot compile make sure the compiler is installed and in PATH");
         fs::remove_file(Path::new(f.clone().as_str()).with_extension("c").to_str().expect("Cannot access filesystem")).expect("Cannot access filesystem");
