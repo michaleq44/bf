@@ -20,5 +20,7 @@ jobs:
       run: echo "+[--->++<]>+.--------------.+++++++++++.[---->+++<]>++.+++++++++.--[->++++<]>.[-->+++++<]>.++.++++++++.-.-[---->+++<]>.[--->++++<]>+.------.+++++++.-----." > test.bf
     - name: Build
       run: cargo build --verbose
-    - name: Run tests
+    - name: Run
       run: cargo run test.bf
+    - name: Test
+      run: ./test
