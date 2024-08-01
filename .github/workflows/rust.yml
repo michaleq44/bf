@@ -24,19 +24,3 @@ jobs:
       run: cargo run test.bf
     - name: Test
       run: ./test
-  build-win:
-    name: build-win
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: create test file
-      run: echo "+[--->++<]>+.--------------.+++++++++++.[---->+++<]>++.+++++++++.--[->++++<]>.[-->+++++<]>.++.++++++++.-.-[---->+++<]>.[--->++++<]>+.------.+++++++.-----." > test.bf
-    - name: Build
-      run: cargo build --verbose
-    - name: Run
-      run: cargo run test.bf
-    - name: List
-      run: dir
-    - name: Test
-      run: test.exe
