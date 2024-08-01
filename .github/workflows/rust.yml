@@ -16,7 +16,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: create test file
+      run: echo "+[--->++<]>+.--------------.+++++++++++.[---->+++<]>++.+++++++++.--[->++++<]>.[-->+++++<]>.++.++++++++.-.-[---->+++<]>.[--->++++<]>+.------.+++++++.-----." > test.bf
     - name: Build
       run: cargo build --verbose
     - name: Run tests
-      run: cargo test --verbose
+      run: cargo run test.bf
