@@ -82,7 +82,7 @@ fn main() {
         //fs::remove_file(Path::new(f.clone().as_str()).with_extension("c").to_str().expect("Cannot access filesystem")).expect("Cannot access filesystem");
         println!("compiled");
     } else if env::consts::OS == "windows" {
-        let _ = Command::new("mingw64\\bin\\gcc")
+        let _ = Command::new("gcc")
                 .arg(Path::new(f.clone().as_str()).with_extension("c").to_str().expect("Cannot access filesystem"))
                 .arg("-o")
                 .arg(Path::new(f.clone().as_str()).with_extension("exe").to_str().expect("Cannot access filesystem"))
